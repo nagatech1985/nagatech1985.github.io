@@ -1,8 +1,141 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Nagatech</title>
-  </head>
+  <style>
+    /* === Nagatech3D Instagram-inspired Theme === */
+    :root {
+        --primary-dark: #000000;
+        --accent-teal: #500a07;
+        --tech-silver: #A8B0B9;
+        --energy-orange: #a30000;
+        --pure-white: #FFFFFF;
+    }
+
+    body {
+        background-color: var(--pure-white);
+        color: var(--primary-dark);
+        font-family: 'Inter', system-ui, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Header Styles */
+    .header {
+        background: linear-gradient(165deg, var(--primary-dark) 60%, var(--accent-teal) 150%);
+        padding: 4rem 1rem 6rem;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .header::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: -10%;
+        width: 120%;
+        height: 100px;
+        background: var(--pure-white);
+        transform: rotate(-3deg);
+        z-index: 1;
+    }
+
+    .company-title {
+        color: var(--pure-white);
+        font-size: 2.8rem;
+        text-shadow: 2px 2px 0 var(--accent-teal), 4px 4px 0 var(--tech-silver);
+        letter-spacing: 2px;
+        position: relative;
+        z-index: 2;
+        margin: 0;
+    }
+
+    /* Main Content */
+    .content-wrapper {
+        flex: 1;
+        padding: 4rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .download-card {
+        background: var(--pure-white);
+        border: 2px solid var(--tech-silver);
+        padding: 2.5rem;
+        border-radius: 12px;
+        max-width: 600px;
+        width: 90%;
+        margin: 2rem 0;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Download Button Styles */
+    .download-btn {
+        background: var(--energy-orange);
+        color: var(--pure-white);
+        padding: 1rem 2.5rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        transition: transform 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        border: none;
+        cursor: pointer;
+        margin-top: 1.5rem;
+    }
+
+    .download-btn::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, 
+            transparent 25%,
+            rgba(255,255,255,0.2) 50%,
+            transparent 75%);
+        animation: btn-glow 3s infinite;
+    }
+
+    .download-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .download-btn i {
+        font-size: 1.4rem;
+    }
+
+    @keyframes btn-glow {
+        0% { transform: rotate(0deg) translate(-50%, -50%); }
+        100% { transform: rotate(360deg) translate(-50%, -50%); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .company-title {
+            font-size: 2rem;
+        }
+        
+        .download-card {
+            padding: 1.5rem;
+        }
+    }
+</style>
+</head>
+<body>
+<header class="header">
+    <h1 class="company-title">Nagatech3D</h1>
+</header>
   <body>
     <h1>Hello World!</h1>
   </body>
