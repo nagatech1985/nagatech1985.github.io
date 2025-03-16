@@ -60,8 +60,44 @@
         .download-card p {
             text-align: center;
         }
+        .download-btn {
+            background: var(--energy-orange);
+            color: var(--pure-white) !important;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            border: none;
+        }
 
-        /* Existing button styles remain the same */
+        .download-btn:hover {
+            background: #8a0000;
+            transform: translateY(-2px);
+        }
+
+        .download-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, 
+                transparent 25%,
+                rgba(255,255,255,0.2) 50%,
+                transparent 75%);
+            animation: btn-glow 3s infinite;
+        }
+
+        @keyframes btn-glow {
+            0% { transform: rotate(0deg) translate(-50%, -50%); }
+            100% { transform: rotate(360deg) translate(-50%, -50%); }
+        }
     </style>
   </head>
   <body class="d-flex flex-column min-vh-100">
@@ -89,8 +125,11 @@
                         <p class="mb-4 text-center">Gerencie seus projetos de impressão 3D com nossa planilha completa de custos.</p>
                         <p class="text-center">Faça o download gratuito:</p>
                         
-                        <div class="d-grid">
-                            <a href="https://docs.google.com/spreadsheets/d/1vHDQJBc4dF8cKNvaOHbVOfcRsWslNsU1_bGkHcKAKyo/edit?usp=sharing" class="download-btn d-inline-flex align-items-center justify-content-center" target="_blank">
+                        <!-- Changed d-grid to regular div -->
+                        <div class="text-center">
+                            <a href="https://docs.google.com/spreadsheets/d/1vHDQJBc4dF8cKNvaOHbVOfcRsWslNsU1_bGkHcKAKyo/edit?usp=sharing" 
+                               class="download-btn"
+                               target="_blank">
                                 <i class="fas fa-download me-2"></i>
                                 Baixar Planilha
                             </a>
@@ -99,9 +138,6 @@
                 </div>
             </div>
         </div>
-    
-
-        
     </main>
 
     <!-- Bootstrap JS and dependencies -->
