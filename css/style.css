@@ -85,4 +85,18 @@
     0% { transform: rotate(0deg) translate(-50%, -50%); }
     100% { transform: rotate(360deg) translate(-50%, -50%); }
 }
+
+/* Custom Carousel Styles */
+#productsCarousel {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  .carousel-item img {
+    height: 400px;
+    object-fit: contain;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgba(0,0,0,0.2);
+  }
 /***</style>***/
