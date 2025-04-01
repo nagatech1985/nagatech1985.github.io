@@ -9,96 +9,9 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="/css/style.css">
     <!-- Updated CSS with new color scheme -->
-    <style>
-        :root {
-            --primary-dark: #000000;
-            --accent-teal: #500a07;
-            --tech-silver: #A8B0B9;
-            --energy-orange: #a30000;
-            --pure-white: #FFFFFF;
-        }
-
-        /* Updated Header Styles */
-        .header {
-            background: linear-gradient(165deg, var(--pure-white) 60%, var(--primary-dark) 150%);
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::after {
-            content: '';
-            position: absolute;
-            bottom: -30px;  /* Adjusted for smaller header */
-            left: -10%;
-            width: 120%;
-            height: 100px;
-            background: var(--pure-white);
-            transform: rotate(-3deg);
-            z-index: 1;
-        }
-
-        /* Logo Adjustments */
-        .header-logo {
-            width: min(80%, 250px);  /* Smaller logo size */
-            height: auto;
-            z-index: 2;
-            transition: transform 0.3s ease;
-        }
-
-        /* Centered Content Styles */
-        .download-card {
-            text-align: center;
-        }
-
-        .download-card h2,
-        .download-card p {
-            text-align: center;
-        }
-        .download-btn {
-            background: var(--energy-orange);
-            color: var(--pure-white) !important;
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            border: none;
-        }
-
-        .download-btn:hover {
-            background: #8a0000;
-            transform: translateY(-2px);
-        }
-
-        .download-btn::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, 
-                transparent 25%,
-                rgba(255,255,255,0.2) 50%,
-                transparent 75%);
-            animation: btn-glow 3s infinite;
-        }
-
-        @keyframes btn-glow {
-            0% { transform: rotate(0deg) translate(-50%, -50%); }
-            100% { transform: rotate(360deg) translate(-50%, -50%); }
-        }
-    </style>
+   
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Header -->
@@ -137,6 +50,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="text-center">
+            <a href="https://amzn.to/3FKH3iy" class="download-btn" target="_blank"><i class="fas fa-download me-2"></i>Adquira sua Bambulab A1 Mini</a>
         </div>
     </main>
 
